@@ -1,10 +1,28 @@
 ﻿using NullCheck;
 
-Console.WriteLine(new PersonWrong()
+var wrongPerson = new PersonWrong()
 {
     Name = "John",
     Surname = null
-});
+};
+
+Console.WriteLine();
+
+//!= is equality operator overloading
+//Expressiveness: != is a common operator, but it doesn't clearly communicate the intent to check if something is null.
+if (wrongPerson.Surname != null)
+{
+    Console.WriteLine("Surname is null");
+}
+//is null is a pattern matching
+//Expressiveness: is null clearly communicates the intent to check if something is null.
+//Performance: Potentially faster when custom != operator overloading is involved.
+//Safety: Avoids potential bugs when the != operator is overloaded to return true for null values.
+//Modern C# 9.0 syntax: is null is a new pattern matching feature in C# 9.0.
+if (wrongPerson.Surname is null)
+{
+    Console.WriteLine("Surname is null");
+}
 
 //No way to make sure that the Name property is set corrctly
 Console.WriteLine(new PersonOld("John", "Doe"));
