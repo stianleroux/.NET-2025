@@ -1,12 +1,26 @@
-﻿namespace PrimaryConstructors
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
+﻿namespace PrimaryConstructors;
 
-    internal class IInterfaces
-    {
-    }
+public interface ILoggingService
+{
+    void Log(string message);
+}
+
+public interface IUserService
+{
+    void AddUser(string name);
+}
+
+public interface IProductService
+{
+    void AddProduct(string name);
+}
+
+public interface IEmailService
+{
+    void SendEmail(string to, string subject);
+}
+
+public interface INotificationService
+{
+    void SendNotification(string message);
 }

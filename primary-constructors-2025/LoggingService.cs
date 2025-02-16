@@ -3,7 +3,8 @@
 //mutable
 public sealed class LoggingService(string logLevel)
 {
-    public void Log(string message) => Console.WriteLine($"[{logLevel}] {message}");
+    public void Log(string message)
+        => Console.WriteLine($"[{logLevel}] {message}");
 }
 
 //immutable
@@ -14,5 +15,6 @@ public sealed class LoggingServiceOld
     public LoggingServiceOld(string logLevel)
         => this.logLevel = logLevel;
 
-    public void Log(string message) => Console.WriteLine($"[{logLevel}] {message}");
+    public void Log(string message)
+        => Console.WriteLine($"[{this.logLevel}] {message}");
 }
