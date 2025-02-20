@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net9.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="TUnit.Assertions" Version="0.13.23" />
+        <PackageReference Include="TUnit.Core" Version="0.13.23" />
+        <PackageReference Include="TUnit.Engine" Version="0.13.23" />
+        <PackageReference Include=" Verify.TUnit" Version="28.11.0" />       
+    </ItemGroup>
+</Project>
